@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="index-style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<body>
+
+	<header>
+		<nav>
+			<div class="logo"><i class="fa-solid fa-plane-departure" style="font-size: 2.5rem;"></i>Explorers</div>
+			<div class="menu">
+				<a href="" id="home" style="color: green;">HOME</a>
+				<a href="" id="packages">PACKAGES</a>
+				<a href="" id="services">SERVICES</a>
+				<a href="" id="contact_us">CONTACT US</a>
+				<a href="" id="about_us">ABOUT US</a>
+			</div>
+			<div class="search">
+				<input type="text" class="search_box" style="color: white;" placeholder="Search...">
+				<i class="fas fa-search" class="search_btn"></i>
+				<a><i class="fa-solid fa-user" style="cursor: pointer; margin-left: 2rem;" onclick="openloginas()"></i></a>	
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="container_left">
+				<div class="content">
+					<h1>DISCOVERING <br>THE WORLD.</h1>
+					<p>Through travel, individuals have the opportunity to immerse
+						themselves in different cultures, try new foods, and witness the 
+						beauty of nature. Exploring new places can also challenge one's 
+						comfort zone and help to develop important life skills.</p>
+					<div class="btns">
+						<button class="read_more">Read More</button>
+					</div>
+				</div>
+			</div>
+			<!------------------------LOGIN/SIGNUP------------------------------>
+			<div class="container_center" id="log_as" style=" display: none;">
+				<div class="login_as">
+					<i class="fa-regular fa-circle-xmark cross" onclick="closeloginas()"></i>
+					<h2>Log In As<br><br></h2><i class="fa-solid fa-user user"></i><br><br>
+					<div style="display: flex; gap: 1; justify-content: space-around;">
+						<button onclick="closeloginas(), openadminlogin()">Admin</button>
+						<button onclick="closeloginas(), openlogin()">User</button>
+					</div>
+				</div>
+			</div>
+			<div class="container_center" id="admin_log_in" style="display: none; ">
+				<form>
+					<i class="fa-regular fa-circle-xmark cross" onclick="closeadminlogin()"></i>
+					<h4>Admin Log In</h4>
+					<div class="form_group">
+						<input type="email" name="email" id="email" placeholder="Enter Email Id">
+					</div>
+					<div class="form_group">
+						<input type="password" name="password" id="password" placeholder="Enter Password" required>
+					</div>
+					<button type="submit" style="margin-bottom: 2rem;">Log In</button>
+				</form>
+			</div>
+
+			<div class="container_center" id="log_in" style="display: none; ">
+				<form action="login.php" method="POST">
+					<i class="fa-regular fa-circle-xmark cross" onclick="closelogin()"></i>
+					<h4>Log in to your account</h4>
+					<div class="form_group">
+						<input type="email" name="email" id="email" placeholder="Enter Email Id">
+					</div>
+					<div class="form_group">
+						<input type="password" name="password" id="password" placeholder="Enter Password">
+					</div>
+					<button type="submit">Log In</button>
+					<p>Not a member? <br> <a onclick="closelogin(),opensignup()"> Create a free account </a></p>
+				</form>
+			</div>
+
+			<div class="container_center" id="sign_up" style="display: none;">
+				<form>
+					<i class="fa-regular fa-circle-xmark cross" onclick="closesignup()"></i>
+					<h4>Sign Up for Instant Access</h4>
+					<div class="form_group">
+						<input type="text" name="name" id="name" placeholder="Enter Your Name">
+					</div>
+					<div class="form_group">
+						<input type="number" name="number" id="number" placeholder="Enter Phone Number">
+					</div>
+					<div class="form_group">
+						<input type="email" name="email" id="email" placeholder="Enter Email Id">
+					</div>
+					<div class="form_group">
+						<input type="password" name="password" id="password" placeholder="Enter Password">
+					</div>
+					<button type="submit">Sign Up</button>
+					<p>Already a member? <a onclick="openlogin(),closesignup()"> Log In </a></p>
+				</form>
+			</div>
+			<!----------------------------------LOGIN/SIGNUP CLOSE--------------------------------->		
+		</div>
+	</header>
+
+	<!------------------------------------About Us------------------------------------>
+	<div class="about">
+		<div class="left">
+			<h1>About Us</h1><br>
+			<p>Welcome to Explorers! We are your ultimate guide to unlocking unforgettable adventures and discovering 
+			hidden gems around the globe. With a passion for exploration and a commitment to providing unparalleled
+		 	travel experiences, we invite you to join us on a journey of discovery. Whether you're seeking adrenaline-fueled
+		  	escapades, cultural immersion, or tranquil retreats, Explorers is here to turn your travel dreams into reality.
+		  	Embark on a voyage with us and let's explore the world together!</p><br>
+		  	<button>Learn More</button>
+		</div>
+		<img src="images/trekking.avif" id="img1">
+		<img src="images/mountain.avif" id="img2">
+	</div>
+	<!----------------------------------About Us End----------------------------------->
+	<!------------------------------Info--------------------------------------------->
+	<div class="info">
+		<div class="info_box">
+			<h1>0</h1>
+			<p>No. Of Tours</p>
+		</div>
+		<div class="info_box">
+			<h1>0</h1>
+			<p>No. Of Clients</p>
+		</div>
+		<div class="info_box">
+			<h1>0</h1>
+			<p>No. Of Employees</p>
+		</div>
+		<div class="info_box">
+			<h1>0</h1>
+			<p>No. Of Countries</p>
+		</div>
+	</div>
+	<!-----------------------------------info end------------------------------------->
+
+    <!---------------------------TOP DESTINATIONS----------------------->
+    <div class="heading">
+        <h5>TOP DESTINATIONS</h5>
+        <h1>Popular Destinations</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="card_container">
+        <a href="#" class="card">
+            <img src="images/taj.jpg">
+			<div class="card_content">
+				<h3>Taj Mahal</h3>
+			</div>
+			<div class="rating">
+				<i class="fa-solid fa-star" style="color: yellow;"></i>
+				<p>4.5</p>
+			</div>
+        </a>
+		<a href="#" class="card">
+            <img src="images/paris.jfif">
+			<div class="card_content">
+				<h3>Taj Mahal</h3>
+			</div>
+			<div class="rating">
+				<i class="fa-solid fa-star" style="color: yellow;"></i>
+				<p>4.5</p>
+			</div>
+        </a>
+		<a href="#" class="card">
+            <img src="images/burj_khalifa.webp">
+			<div class="card_content">
+				<h3>Taj Mahal</h3>
+			</div>
+			<div class="rating">
+				<i class="fa-solid fa-star" style="color: yellow;"></i>
+				<p>4.5</p>
+			</div>
+        </a>
+    </div>
+    <!--------------------------------------TOP DESTINATIONS END------------------------------>
+
+	<!----------------------------------OUR SERVICES---------------------------------->
+	<div class="heading">
+        <h5>SOME OF OUR SERVICES</h5>
+        <h1>Our Services</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+	<div class="service_container">
+		<div class="service">
+			<div class="service_box">
+				<i class="fas fa-hotel" id="icon"></i>
+    			<h3>Affordable Hotel</h3><br>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+    			<button><i class="fa-solid fa-arrow-right"></i></button>
+			</div>
+			<div class="service_box">
+    			<i class="fas fa-utensils" id="icon"></i>
+    			<h3>Food and Drinks</h3><br>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+    			<button><i class="fa-solid fa-arrow-right"></i></button>
+    		</div>
+    		<div class="service_box">
+    			<i class="fas fa-bullhorn" id="icon"></i>
+    			<h3>Safety Guide</h3><br>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+    			<button><i class="fa-solid fa-arrow-right"></i></button>
+    		</div>
+    		<div class="service_box">
+    			<i class="fas fa-globe-asia" id="icon"></i>
+    			<h3>Around The World</h3><br>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+    			<button><i class="fa-solid fa-arrow-right"></i></button>
+    		</div>
+    		<div class="service_box">
+    			<i class="fas fa-plane" id="icon"></i>
+    			<h3>Fastest Travel</h3><br>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+    			<button><i class="fa-solid fa-arrow-right"></i></button>
+    		</div>
+    		<div class="service_box">
+    			<i class="fas fa-hiking" id="icon"></i>
+    			<h3>Adventure</h3><br>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><br>
+    			<button><i class="fa-solid fa-arrow-right"></i></button>
+    		</div>
+		</div>
+	</div>
+
+	<!---------------------------------OUR SERVICES END------------------------------->
+
+    
+	<script src="index-js.js"></script>
+</body>
+</html>
